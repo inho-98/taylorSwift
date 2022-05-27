@@ -7,7 +7,7 @@
 
 import Foundation
 
-func makePepero(height: Int, body: String, topping: String, stickHeight: Int) {
+func makePepero(using body: String, and topping: String, height: Int, stickHeight: Int) {
     let information = """
                          <정보>
                          길이: \(height)
