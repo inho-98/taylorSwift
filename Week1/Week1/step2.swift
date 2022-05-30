@@ -7,26 +7,31 @@
 
 import Foundation
 
-func makeIceCreamBody(width: Int, height: Int) {
+func makeIceCreamBody(width: Int, height: Int) -> String {
+    var result = ""
     for _ in 1...height {
-        print(String(repeating: "*", count: width))
+        result += String(repeating: "*", count: width) + "\n"
     }
+    return result
 }
 
-func makeIceCreamStick(_ stick: String, space: Int, height: Int) {
+func makeIceCreamStick(_ stick: String, space: Int, height: Int) -> String {
+    var result = ""
     for _ in 1...height {
-        print(String(repeating: " ", count: space), terminator: "")
-        print(stick)
+        result += String(repeating: " ", count: space) + stick + "\n"
     }
+    return result
 }
 
-func makeIceCream(bodyWidth: Int, bodyHeight: Int) {
+func makeIceCream(bodyWidth: Int, bodyHeight: Int) -> String {
+    var result = ""
     let space = (bodyWidth - 3) / 2
     let stickHeight = bodyHeight / 2
-    makeIceCreamBody(width: bodyWidth, height: bodyHeight)
+    result += makeIceCreamBody(width: bodyWidth, height: bodyHeight)
     if bodyWidth % 2 != 0 {
-        makeIceCreamStick("| |", space: space, height: stickHeight)
+        result += makeIceCreamStick("| |", space: space, height: stickHeight)
     } else {
-        makeIceCreamStick("|  |", space: space, height: stickHeight)
+        result += makeIceCreamStick("|  |", space: space, height: stickHeight)
     }
+    return result
 }

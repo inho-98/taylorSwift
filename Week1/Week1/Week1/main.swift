@@ -7,5 +7,5 @@
 
 import Foundation
 
-makeIceCream(bodyWidth: 12, bodyHeight: 8)
-makePepero(using: "***", and: "&", height: 12, stickHeight: 6)
+print(makeIceCream(bodyWidth: 11, bodyHeight: 8))
+makePepero(using: "***", and: "#", height: 11, stickHeight: 4)
