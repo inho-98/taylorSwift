@@ -17,13 +17,8 @@ func makePepero(using ingredient: String, and topping: String? = nil, height: In
                          """
     
     print(information, terminator: "\n\n")
-    if let topping = topping {
-        makePeperoBody(of: height, using: ingredient, and: topping)
-        makePeperoStick(of: stickHeight)
-    } else {
-        makePeperoBody(of: height, using: ingredient, and: topping)
-        makePeperoStick(of: stickHeight)
-    }
+    makePeperoBody(of: height, using: ingredient, and: topping)
+    makePeperoStick(of: stickHeight)
 }
 
 func makePartOfBody(using ingredient: String, and topping: String?, order: Int) {
